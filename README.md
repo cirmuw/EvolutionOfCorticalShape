@@ -1,5 +1,7 @@
 # Evolution of Cortical Geometry and its Link to Function, Behaviour and Ecology
 
+![plot](./images/all_surfaces_small.png)
+
 This repository holds the data supporting the findings of _Evolution of Cortical Geometry and its Link to Function, Behaviour and Ecology_ by Ernst Schwartz<sup>1</sup>,  Karl-Heinz Nenning<sup>1,2</sup>, Katja Heuer<sup>5</sup>, Nathan Jeffery<sup>3</sup>, Ornella C. Bertrand<sup>4</sup>, Roberto Toro<sup>5</sup>, Gregor Kasprian<sup>1</sup>, Daniela Prayer<sup>1</sup>, Georg Langs<sup>1,6</sup>
 
 <sup>1</sup>	Department of Biomedical Imaging and Image-guided Therapy, Computational Imaging Research Lab, Medical University Vienna, Vienna, Austria
