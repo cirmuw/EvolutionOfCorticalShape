@@ -23,17 +23,17 @@ Studies in comparative neuroanatomy and of the fossil record demonstrate the inf
 ## Tools in this repository
 [Phylogenetic trees used in the study](_phylogenies) sampled from [http://vertlife.org/data/mammals/](Vertlife)
 
-[Volumes in MNI space obtained from analysing relationships between cortical morphology and ecological variables as well as its evolution in the deep human lineage](_decodingMaps). These maps are also deposited at [https://neurovault.org/collections/IHFSXSES/](NeuroVault). Ancestral state reconstruction of the human lineage until the Last Common Ancestor of all Euarchontoglires resulted in the following rendering (1 second corrsponds to 1 million years):
+[Volumes in MNI space obtained from analysing relationships between cortical morphology and ecological variables as well as its evolution in the deep human lineage](_decodingMaps). These maps are also deposited at [https://neurovault.org/collections/IHFSXSES/](NeuroVault). Ancestral state reconstruction of the human lineage until the Last Common Ancestor of all Euarchontoglires resulted in the following rendering (colors are derived from [Glasser2016](https://doi.org/10.1038/nature18933) and correspond to blue: visual, red: sensor/motor, green: auditory. 1 second corrsponds to 1 million years):
 
 <div align="center">
 <video src=https://user-images.githubusercontent.com/4426897/221379161-2966db19-f703-42e0-86c8-8d671e0bd98a.mp4>
 </div><br/>
 
 
-[Surface models of all species used in the study as well as their ancestral state estimates](_surfaces). Here, we provide surface models for the cortices of the 90 different species used in the study, both in their native topologies and in a _Common Phlyogenetic Reference Frame CPRF_ (with the same topology as fsaverage6 from [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/). Additionally, we provide maps between these spaces to be used in the [Connectome Workbench](https://www.humanconnectome.org/software/connectome-workbench) as well as maps to some additional commonly used reference spaces for mice, rats, marmosets, macaques and chimpanzees in !!!!!!. For how to use them, see the following tutorial.
+[Surface models of all species used in the study as well as their ancestral state estimates](_surfaces). Here, we provide surface models for the cortices of the 90 different species used in the study, both in their native topologies and in a _Common Phlyogenetic Reference Frame CPRF_ (with the same topology as fsaverage6 from [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/)). Additionally, we provide maps between these spaces to be used in the [Connectome Workbench](https://www.humanconnectome.org/software/connectome-workbench) as well as maps to some additional commonly used reference spaces for mice, rats, macaques and chimpanzees in [_mappings](_mappings). For an example on how to use them and the CPRF, see the following tutorial.
 
 ## Mapping tutorial
-Apart their interesting results on the evolution of cortical shape, the CPRF lends itself to translating results between species. As a proof of concept, we will investigate recent results that link the [Clusterin gene](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CLU) to neurodegenerative diseases such as Alzheimers and myelination ([Beiter2022](https://doi.org/10.1101/2020.03.06.981373), [Fareed2022](https://doi.org/10.3390/biom12101452)). We will use myelin data of Macaques from the [Balsa Database](https://balsa.wustl.edu/reference/976nz) and compare it to gene expression data of Mice from the [Allen Brain Atlas](http://mouse.brain-map.org/experiment/show/275). For simplicity, we only process data on the right hemisphere, but the steps for the left hemisphere are equivalent. Processing requires the Connectome Workbench as well as [FSL tools](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL) and [Convert3D](http://www.itksnap.org/pmwiki/pmwiki.php?n=Convert3D.Convert3D) to be on the path.
+Apart for their interesting results on the evolution of cortical shape, the CPRF lends itself to translating results between species. As a proof of concept, we will investigate recent results that link the [Clusterin gene](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CLU) to neurodegenerative diseases such as Alzheimers and myelination ([Beiter2022](https://doi.org/10.1101/2020.03.06.981373), [Fareed2022](https://doi.org/10.3390/biom12101452)). We will use myelin data of Macaques from the [Balsa Database](https://balsa.wustl.edu/reference/976nz) and compare it to gene expression data of Mice from the [Allen Brain Atlas](http://mouse.brain-map.org/experiment/show/275). For simplicity, we only process data on the right hemisphere, but the steps for the left hemisphere are equivalent. Processing requires the Connectome Workbench as well as [FSL tools](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL) and [Convert3D](http://www.itksnap.org/pmwiki/pmwiki.php?n=Convert3D.Convert3D) to be on the path. These scripts are also available at [_mapping_tutorial](_mapping_tutorial).
 
 ### Mapping estimates of cortical myelin in macaques to the CPRF
 We start by mapping estimates of cortical myelin publicly available at [https://balsa.wustl.edu/reference/976nz](https://balsa.wustl.edu/reference/976nz) to the CPRF. We start by defining some directories used for the local copy of this repository and some temporary data.
@@ -45,7 +45,7 @@ BALSA_DATA_DIR=/the/path/to/the/local/copy/of/the/balsa/data/MacaqueYerkes19_v1.
 REPO_DIR=/the/path/to/the/local/copy/of/this/repository/EvolutionOfCorticalShape
 ```
 
-Because the data is defined in the Yerkes19 template space, but in the study we used the NMTv1.3 space, we first have to map it to this space. We will use the [Connectome Workbench](https://www.humanconnectome.org/software/connectome-workbench) for this.
+Because the data is defined in the Yerkes19 template space, but in the study we used the [NMTv1.3 space](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/nonhuman/macaque_tempatl/template_nmtv1.html), we first have to map it to this space. We will use the [Connectome Workbench](https://www.humanconnectome.org/software/connectome-workbench) for this.
 We start by defining the source and target spaces and hemisphere
 
 ```
@@ -186,7 +186,7 @@ wb_command -metric-resample ${OUT_FILE} $SPH_TARGET $SPH_RESAMPLE_CPRF ADAP_BARY
 After mapping both datasets to the CPRF, we can now compare them both qualitatively and quantitatively. First, we plot both datasets on the human fsaverage6 template
 
 <p align="center">
-<img width=800 src="https://user-images.githubusercontent.com/4426897/221382204-bdc23312-d1da-40cc-af6e-a0c052f3c217.png">
+<img width=800 src="images/clusterin_myelin_comparison_fsaverage.png">
 </p>
 
-We use Spin Tests [Alexander-Block2018](https://doi.org/10.1016/j.neuroimage.2018.05.070) to measure the correlation between the two surface maps in the CPRF, obtaining a Pearson correlation coefficient of -0.4331 with p<1e-3. This indicates that there is indeed an evolutionary conserved negative relationship between the expression of Clusterin and the amount of myelin in the cortex.
+We use Spin Tests ([Alexander-Block2018](https://doi.org/10.1016/j.neuroimage.2018.05.070)) to measure the correlation between the two surface maps in the CPRF, obtaining a Pearson correlation coefficient of -0.4331 with p<1e-3. This indicates that there is indeed an evolutionary conserved negative relationship between the expression of Clusterin and the amount of myelin in the cortex.
