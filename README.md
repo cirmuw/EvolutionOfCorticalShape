@@ -124,7 +124,7 @@ c3d energy_sba.nii.gz -orient RPI -spacing 0.2x0.2x0.2mm -origin -5.7x7.825x-2.8
 popd
 ```
 
-We now interpolate the gene expression data to the cortical surface model. Due to data quality, the delineation of the cortical sheet was not allways possible for the specimen used in the study, so we relied solely on the outer cortical surface. For interpolating data from a volume to the surface, we therefore use a thin strip inside of the pial surface which we obtain from the surface normals
+We now interpolate the gene expression data to the cortical surface model. Due to data quality, the delineation of the cortical sheet was not always possible for the specimen used in the study, so we relied solely on the outer cortical surface. For interpolating data from a volume to the surface, we therefore use a thin strip inside of the pial surface which we obtain from the surface normals
 
 ```
 VOLUME=${PROCESSING_DIR}/energy_sba.nii.gz
