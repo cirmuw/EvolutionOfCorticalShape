@@ -23,15 +23,17 @@ Studies in comparative neuroanatomy and of the fossil record demonstrate the inf
 ## Tools in this repository
 [Phylogenetic trees used in the study](_phylogenies) sampled from [http://vertlife.org/data/mammals/](Vertlife)
 
-[Volumes in MNI space obtained from analysing relationships between cortical morphology and ecological variables as well as its evolution in the deep human lineage](_decodingMaps). These maps are also deposited at [https://neurovault.org/collections/IHFSXSES/](NeuroVault). Ancestral state reconstruction of the human lineage until the Last Common Ancestor of all Euarchontoglires resulted in the following rendering (colors are derived from [Glasser2016](https://doi.org/10.1038/nature18933) and correspond to blue: visual, red: sensor/motor, green: auditory. 1 second corrsponds to 1 million years):
+[Volumes in MNI space obtained from analysing relationships between cortical morphology and ecological variables as well as its evolution in the deep human lineage](_decodingMaps). These maps are also deposited at [https://neurovault.org/collections/IHFSXSES/](NeuroVault). 
+
+[Surface models of all species used in the study as well as their ancestral state estimates](_surfaces). Here, we provide surface models for the cortices of the 90 different species used in the study, both in their native topologies and in a _Common Phlyogenetic Reference Frame CPRF_ (with the same topology as fsaverage6 from [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/)). Additionally, we provide maps between these spaces to be used in the [Connectome Workbench](https://www.humanconnectome.org/software/connectome-workbench) as well as maps to some additional commonly used reference spaces for mice, rats, macaques and chimpanzees in [_mappings](_mappings). For an example on how to use them and the CPRF, see the following [tutorial](#tutorial).
+
+<b>Ancestral state reconstruction of the human lineage until the Last Common Ancestor of all Euarchontoglires</b> resulted in the following rendering (colors are derived from [Glasser2016](https://doi.org/10.1038/nature18933) and correspond to blue: visual, red: sensor/motor, green: auditory. 1 second corrsponds to 1 million years):
 
 <div align="center">
 <video src=https://user-images.githubusercontent.com/4426897/221379161-2966db19-f703-42e0-86c8-8d671e0bd98a.mp4>
 </div><br/>
 
-
-[Surface models of all species used in the study as well as their ancestral state estimates](_surfaces). Here, we provide surface models for the cortices of the 90 different species used in the study, both in their native topologies and in a _Common Phlyogenetic Reference Frame CPRF_ (with the same topology as fsaverage6 from [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/)). Additionally, we provide maps between these spaces to be used in the [Connectome Workbench](https://www.humanconnectome.org/software/connectome-workbench) as well as maps to some additional commonly used reference spaces for mice, rats, macaques and chimpanzees in [_mappings](_mappings). For an example on how to use them and the CPRF, see the following tutorial.
-
+<a name="tutorial"></a>
 ## Mapping tutorial
 Apart for their interesting results on the evolution of cortical shape, the CPRF lends itself to translating results between species. As a proof of concept, we will investigate recent results that link the [Clusterin gene](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CLU) to neurodegenerative diseases such as Alzheimers and myelination ([Beiter2022](https://doi.org/10.1101/2020.03.06.981373), [Fareed2022](https://doi.org/10.3390/biom12101452)). We will use myelin data of Macaques from the [Balsa Database](https://balsa.wustl.edu/reference/976nz) and compare it to gene expression data of Mice from the [Allen Brain Atlas](http://mouse.brain-map.org/experiment/show/275). For simplicity, we only process data on the right hemisphere, but the steps for the left hemisphere are equivalent. Processing requires the Connectome Workbench as well as [FSL tools](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL) and [Convert3D](http://www.itksnap.org/pmwiki/pmwiki.php?n=Convert3D.Convert3D) to be on the path. These scripts are also available at [_mapping_tutorial](_mapping_tutorial).
 
