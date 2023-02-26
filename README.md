@@ -35,10 +35,10 @@ Studies in comparative neuroanatomy and of the fossil record demonstrate the inf
 
 <a name="tutorial"></a>
 ## Mapping tutorial
-Apart for their interesting results on the evolution of cortical shape, the CPRF lends itself to translating results between species. As a proof of concept, we will investigate recent results that link the [Clusterin gene](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CLU) to neurodegenerative diseases such as Alzheimers and myelination ([Beiter2022](https://doi.org/10.1101/2020.03.06.981373), [Fareed2022](https://doi.org/10.3390/biom12101452)). We will use myelin data of Macaques from the [Balsa Database](https://balsa.wustl.edu/reference/976nz) and compare it to gene expression data of Mice from the [Allen Brain Atlas](http://mouse.brain-map.org/experiment/show/275). For simplicity, we only process data on the right hemisphere, but the steps for the left hemisphere are equivalent. Processing requires the Connectome Workbench as well as [FSL tools](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL) and [Convert3D](http://www.itksnap.org/pmwiki/pmwiki.php?n=Convert3D.Convert3D) to be on the path. These scripts are also available at [_mapping_tutorial](_mapping_tutorial).
+Apart for their interesting results on the evolution of cortical shape, the CPRF lends itself to translating results between species. As a proof of concept, we will investigate recent results that link the [Clusterin gene](https://www.genecards.org/cgi-bin/carddisp.pl?gene=CLU) to neurodegenerative diseases such as Alzheimers and myelination ([Beiter2022](https://doi.org/10.1101/2020.03.06.981373), [Fareed2022](https://doi.org/10.3390/biom12101452)). We will use myelin data of macaques from the [Balsa Database](https://balsa.wustl.edu/reference/976nz) and compare it to gene expression data of mice from the [Allen Brain Atlas](http://mouse.brain-map.org/experiment/show/275). For simplicity, we only process data on the right hemisphere, but the steps for the left hemisphere are equivalent. Processing requires the Connectome Workbench as well as [FSL tools](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL) and [Convert3D](http://www.itksnap.org/pmwiki/pmwiki.php?n=Convert3D.Convert3D) to be on the path. These scripts are also available at [_mapping_tutorial](_mapping_tutorial).
 
 ### Mapping estimates of cortical myelin in macaques to the CPRF
-We start by mapping estimates of Macaque cortical myelin publicly available at [https://balsa.wustl.edu/reference/976nz](https://balsa.wustl.edu/reference/976nz) to the CPRF. First, we define some directories used for the local copy of this repository and some temporary data.
+We start by mapping estimates of macaque cortical myelin publicly available at [https://balsa.wustl.edu/reference/976nz](https://balsa.wustl.edu/reference/976nz) to the CPRF. First, we define some directories used for the local copy of this repository and some temporary data.
 
 ```
 PROCESSING_DIR=/a/path/to/some/directory
@@ -149,7 +149,7 @@ wb_command -volume-to-surface-mapping ${VOLUME} ${SURFACE} ${OUTPUT} -ribbon-con
 
 ```
 
-Instead of the ABA, we used data from [Calabrese2015](https://doi.org/10.1093/cercor/bhv121) for the construction of the CPRF, so just as for the Macaque data, we have to apply an additional mapping 
+Instead of the ABA, we used data from [Calabrese2015](https://doi.org/10.1093/cercor/bhv121) for the construction of the CPRF, so just as for the macaque data, we have to apply an additional mapping 
 
 ```
 SOURCE_SPACE=ABA_CCF3_sba
@@ -183,7 +183,7 @@ MODEL_TARGET_CPRF=${REPO_DIR}/_surfaces/sub-043_species-Mus+musculus_hemi-${HEMI
 wb_command -metric-resample ${OUT_FILE} $SPH_TARGET $SPH_RESAMPLE_CPRF ADAP_BARY_AREA ${OUT_FILE_CPRF} -area-surfs $MODEL_TARGET $MODEL_TARGET_CPRF
 ```
 
-### Comparing Clusterin expression in Mice and cortical myelin in Macaques
+### Comparing Clusterin expression in mice and cortical myelin in macaques
 
 After mapping both datasets to the CPRF, we can now compare them both qualitatively and quantitatively. First, we plot both datasets on the human fsaverage6 template
 
