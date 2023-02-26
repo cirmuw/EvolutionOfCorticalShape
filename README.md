@@ -191,4 +191,4 @@ After mapping both datasets to the CPRF, we can now compare them both qualitativ
 <img width=800 src="images/clusterin_myelin_comparison_fsaverage.png">
 </p>
 
-We use Spin Tests ([Alexander-Block2018](https://doi.org/10.1016/j.neuroimage.2018.05.070)) to measure the correlation between the two surface maps in the CPRF, obtaining a Pearson correlation coefficient of -0.4331 with p<1e-3. This indicates that there is indeed an evolutionary conserved negative relationship between the expression of Clusterin and the amount of myelin in the cortex.
+We use Spin Tests ([Alexander-Bloch2018](https://doi.org/10.1016/j.neuroimage.2018.05.070)) to measure the correlation between the two surface maps in the CPRF, obtaining a Pearson correlation coefficient of -0.4331 with p<1e-3. This indicates that there is indeed an evolutionary conserved negative relationship between the expression of Clusterin and the amount of myelin in the cortex.
