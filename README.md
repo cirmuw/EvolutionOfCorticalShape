@@ -27,10 +27,10 @@ Studies in comparative neuroanatomy and of the fossil record demonstrate the inf
 
 [Surface models of all species used in the study as well as their ancestral state estimates](_surfaces). Here, we provide surface models for the cortices of the 90 different species used in the study, both in their native topologies and in a _Common Phlyogenetic Reference Frame CPRF_ (with the same topology as fsaverage6 from [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/)). Additionally, we provide maps between these spaces to be used in the [Connectome Workbench](https://www.humanconnectome.org/software/connectome-workbench) as well as maps to some additional commonly used reference spaces for mice, rats, macaques and chimpanzees in [_mappings](_mappings). For an example on how to use them and the CPRF, see the following [tutorial](#tutorial).
 
-<b>Ancestral state reconstruction of the human lineage until the Last Common Ancestor of all Euarchontoglires</b> resulted in the following rendering (colors are derived from [Glasser2016](https://doi.org/10.1038/nature18933) and correspond to blue: visual, red: sensor/motor, green: auditory. 1 second corrsponds to 1 million years):
+<b>Ancestral state reconstruction of the human lineage until the Last Common Ancestor of all Euarchontoglires</b> resulted in the following rendering (colors are derived from [Glasser2016](https://doi.org/10.1038/nature18933) and correspond to blue: visual, red: sensor/motor, green: auditory. 1 second corresponds to 1 million years):
 
 <div align="center">
-<video src=https://user-images.githubusercontent.com/4426897/221379161-2966db19-f703-42e0-86c8-8d671e0bd98a.mp4>
+<video src=https://user-images.githubusercontent.com/4426897/221442815-6d832c24-82e5-4f19-af50-f0368409891e.mp4>
 </div><br/>
 
 <a name="tutorial"></a>
