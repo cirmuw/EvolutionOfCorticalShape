@@ -1,4 +1,5 @@
-# Evolution of Cortical Geometry and its Link to Function, Behaviour and Ecology
+# Evolution of Cortical Geometry and its Link to Function, Behaviour and Ecology <div align="right">[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7713847.svg)](https://doi.org/10.5281/zenodo.7713847)</div>
+
 
 ![plot](./images/all_surfaces_small.png)
 
