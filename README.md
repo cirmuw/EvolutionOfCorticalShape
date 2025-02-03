@@ -3,18 +3,13 @@
 
 ![plot](./images/all_surfaces_small.png)
 
-This repository holds the data supporting the findings of Ernst Schwartz<sup>1</sup>,  Karl-Heinz Nenning<sup>1,2</sup>, Katja Heuer<sup>5</sup>, Nathan Jeffery<sup>3</sup>, Ornella C. Bertrand<sup>4</sup>, Roberto Toro<sup>5</sup>, Gregor Kasprian<sup>1</sup>, Daniela Prayer<sup>1</sup>, Georg Langs<sup>1,6</sup> _Evolution of Cortical Geometry and its Link to Function, Behaviour and Ecology_ Nat Commun 14, 2252 (2023). [https://doi.org/10.1038/s41467-023-37574-x]
+This repository holds the data supporting the findings of Ernst Schwartz<sup>1</sup>,  Karl-Heinz Nenning<sup>1,2</sup>, Katja Heuer<sup>5</sup>, Nathan Jeffery<sup>3</sup>, Ornella C. Bertrand<sup>4</sup>, Roberto Toro<sup>5</sup>, Gregor Kasprian<sup>1</sup>, Daniela Prayer<sup>1</sup>, Georg Langs<sup>1,6</sup> _Evolution of Cortical Geometry and its Link to Function, Behaviour and Ecology_. **Nature Communications** 14, 2252 (2023). [https://doi.org/10.1038/s41467-023-37574-x]
 
 <sup>1</sup>	Department of Biomedical Imaging and Image-guided Therapy, Computational Imaging Research Lab, Medical University Vienna, Vienna, Austria
-
 <sup>2</sup>	Center for Biomedical Imaging and Neuromodulation, Nathan Kline Institute, Orangeburg, NY, USA
-
 <sup>3</sup>	Institute of Life Course & Medical Sciences, University of Liverpool, Liverpool, England
-
 <sup>4</sup>	Institut Català de Paleontologia Miquel Crusafont, Universitat Autònoma de Barcelona Edifici ICTA-ICP, c/ Columnes s/n, Campus de la UAB, 08193 Cerdanyola del Vallès. Barcelona, Spain
-
 <sup>5</sup>	Institut Pasteur, Université Paris Cité, Unité de Neuroanatomie Appliquée et Théorique, F-75015 Paris, France
-
 <sup>6</sup>	Computer Science and Artificial Intelligence Lab, Massachusetts Institute of Technology, Cambridge, USA
 
 ### Abstract
